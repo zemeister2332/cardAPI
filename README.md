@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # cards
 
 | Route | HTTP Verb	 | POST body	 | Description	 |
@@ -21,3 +22,7 @@
 | /banks/:banks_id | `DELETE` | Empty | Delete a bank. |
 | /banks/:banks_id/best10card | `GET` | Empty | The bank's top 10 cards. |
 
+=======
+# carAPI
+Bu bizning Birinchi Projectimiz
+>>>>>>> 8c33e4887ebaae11bfa94d475efa39bf123e61c4
