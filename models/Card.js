@@ -7,11 +7,15 @@ const CardSchema = new Schema({
        type: String,
        required: true
    },
+    amount: Number,
     category: String,
     country: String,
     year: Number,
-    type: String
-
+    type: String,
+    createdAt: {
+       type: Date,
+        default: Date.now
+    }
 });
 
 module.exports = mongoose.model('card', CardSchema);
