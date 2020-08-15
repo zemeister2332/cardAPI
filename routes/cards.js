@@ -73,8 +73,8 @@ router.get('/between/:start_year/:end_year', (req,res) => {
 });
 
 // Find Cards By Id
-router.get('/:holder_id', (req,res,next) => {
-  const promise = Card.findById(req.params.holder_id);
+router.get('/:card_id', (req,res,next) => {
+  const promise = Card.findById(req.params.card_id);
   //console.log(req.params);
 
   promise.then((card) => {
@@ -88,9 +88,9 @@ router.get('/:holder_id', (req,res,next) => {
 });
 
 // Find Cards And Update By Id
-router.put('/:holder_id', (req,res,next) => {
+router.put('/:card_id', (req,res,next) => {
   const promise = Card.findByIdAndUpdate(
-      req.params.holder_id,
+      req.params.card_id,
       req.body,
       {
         new: true
@@ -108,8 +108,8 @@ router.put('/:holder_id', (req,res,next) => {
   });
 });
 // Find Cards And Delete By Id
-router.delete('/:holder_id', (req,res,next) => {
-  const promise = Card.findByIdAndRemove(req.params.holder_id);
+router.delete('/:card_id', (req,res,next) => {
+  const promise = Card.findByIdAndRemove(req.params.card_id);
   //console.log(req.params);
 
   promise.then((card) => {
