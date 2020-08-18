@@ -89,7 +89,7 @@ router.get('/:card_id', (req,res,next) => {
 
 // Find Cards And Update By Id
 router.put('/:card_id', (req,res,next) => {
-  const promise = Card.findByIdAndUpdate(
+  const promise = Card.findOneAndUpdate(
       req.params.card_id,
       req.body,
       {
@@ -109,7 +109,7 @@ router.put('/:card_id', (req,res,next) => {
 });
 // Find Cards And Delete By Id
 router.delete('/:card_id', (req,res,next) => {
-  const promise = Card.findByIdAndRemove(req.params.card_id);
+  const promise = Card.findOneAndDelete(req.params.card_id);
   //console.log(req.params);
 
   promise.then((card) => {

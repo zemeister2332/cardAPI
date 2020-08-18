@@ -4,7 +4,7 @@ module.exports = () => {
     mongoose.connect('mongodb+srv://admin:11223344@newapi.ldvvc.mongodb.net/NEWAPI?retryWrites=true&w=majority',
         {
             useUnifiedTopology: true,
-            useNewUrlParser: true
+            useNewUrlParser: true,
         }
         );
 
@@ -14,4 +14,5 @@ module.exports = () => {
     mongoose.connection.on("error", (err) => {
         console.log("MongoDB XATO", err)
     });
+    mongoose.set('useFindAndModify', false);
 };
