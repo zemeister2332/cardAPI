@@ -116,7 +116,7 @@ router.delete('/:card_id', (req,res,next) => {
     if (!card)
       next({ message: 'The card is not defined', code: 99 })
 
-    res.json({ status: 'OK DELETED' });
+    res.json({ status: 200 });
   }).catch((err) => {
     res.json(err);
   });
